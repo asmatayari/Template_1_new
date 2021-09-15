@@ -1,0 +1,881 @@
+
+
+/* general css Styles*/
+.clear {
+    clear: both;
+}
+
+
+body{
+    font-family: inherit
+}
+*{
+    margin:  0 ;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.overlay{
+   position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    }
+    button {
+        font-family: 'Varela Round', sans-serif;
+    }
+    /*ayhh sandou9 nisn3ou ili di wistou il kol text-align : center w ba3d nod5el li s8ar*/
+.section-header{
+text-align: center;
+margin-bottom: 20px;
+
+
+    }
+    .section-header-service{
+        text-align: left;
+        margin-bottom: 20px;
+        
+        
+            }
+            .section-header-service .line{
+                width: 50px;
+                height: 5px;
+                display: block;
+                margin:   left ;
+                background-color:#6195ff;
+            }    
+.section-header .Section-title{
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-bottom: 4px;
+}
+/*span element inline lezm nraj3ou bloc miche nijm nista3ml margin:auto ili houwa i7ot aya 7aja center fi ligne ili houwa fiha*/
+.section-header .line {
+    width: 50px;
+    height: 5px;
+    display: block;
+    margin: 0px auto 70px auto;
+    background-color:#6195ff;
+}
+
+/*padding mta3 kol section */
+.pd-y {
+    padding : 120px 0px ;
+}
+
+   
+
+.ltr-effect::after{
+
+width: 0;
+right: 0;
+transition: width 0.5s;
+
+}
+
+.ltr-effect:hover:after{
+    width: 100%;   
+} 
+
+
+/* Header*/
+.container{
+    width: 80%;
+    height: 20%;
+   
+    margin: auto;
+}
+.Header{
+   
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+}
+.Header .logo{
+    width: 40%;
+    float: left;
+}
+.Header .navbar{
+    width: 60%; 
+    float: left;
+    text-align: right;
+
+}
+.Header .logo img {
+    width: 18%;
+    margin-top: 9px;
+}
+.Header .navbar > li{
+    list-style: none;
+    display: inline-block;
+}  
+.Header .navbar > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding:  30px 20px ;
+    display: block; 
+}
+
+/*After w before sont des element inline don on transfére en block*/
+.Header .navbar > li > a.active::after {
+   width: 100%;
+  
+}
+.Header .navbar > li > a::after {
+    width: 0%;
+
+ }
+ /*ki na3ml hover 3ala a donc i3aytt lil aftar w na3tih widh 100% de son pere */
+ .Header .navbar > li > a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color:#6195ff;
+ }
+ .Header .navbar  > li a.active::after , .Header .navbar li > a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color:#6195ff;
+    transition: width 0.5s;
+    margin-top: 2px;
+ }
+
+
+/* Home Section */
+.title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 3rem;
+    font-family: 'montserrat', sans-serif;
+
+
+}
+.home{
+    height: 100vh;
+    background: url('../images/background/background1.webp');
+    background-size: cover;
+    position: relative;
+}
+.home-content{
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+}
+.home-description{
+    margin:10px 0px ;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+.home .btn{
+    min-width:170px;
+    padding : 15px 2px ;
+    border:0px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.home .btn-start{
+    margin-right: 10px;
+    background-color: white;
+}
+.home .btn-Learn{
+    margin-right: 10px;
+    background-color:#6195ff;
+    color: white;
+}
+.hover-opacity {
+    transition:opacity .5s;
+}
+.hover-opacity:hover{
+    opacity: 0.8;
+}
+/*DropDawen*/
+.pere-drop{
+    position: relative;
+
+}
+.drop-menu{
+    position: absolute;
+    background: royalblue;
+    top: 75%;
+    list-style-type: none;
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s , visibility 0.5s;
+}
+.drop-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 0px;
+}
+/*ki na3mll hover 3all pere-drop jibli drop-menu w a3mlou opacity w visibilite*/
+.pere-drop:hover .drop-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* About  Section */
+.Aboute {
+
+
+}
+.About-container{
+   overflow: hidden;
+}
+.About-items{
+    float: left;
+    text-align: center;
+    border : 1px solid #e8e8e8 ;
+    width: 30%;
+    padding: 70px 50px;
+}
+.About-items.mg {
+    margin: 0px 5%;
+}
+.About-items .icon {
+color: #6195ff;
+margin-bottom: 10px;
+} 
+.About-title-items{
+   text-transform: capitalize;
+   margin-bottom: 10px; 
+   transition: color 0.5s;
+}
+.About-description-items{
+line-height: 1.2;
+margin-bottom: 10px;
+font-size: 18px;
+color:#999;
+}
+.About-items-link{
+    color: #6195ff;
+    text-transform: capitalize;
+}
+.About-items:hover .About-title-items{
+    color: white;
+}
+/* Portefolio Section */
+.profil{
+    background-color:#bbbbbb47;
+}
+.profil-item{
+    float: left;
+    width: 30%;
+    margin-bottom:60px ;
+ position: relative;
+ padding: 15px;
+
+}
+.profil-item img{
+    width: 100%;
+}
+/*element ili 3andou zouz classet */
+.profil-item.img
+{
+    margin:0 5% ;
+}
+.profil-item .layer-content{
+    position: absolute ;
+   /* 
+    */
+
+  background-color: rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity  0.5s;
+}
+.profil-item:hover .layer-content {
+    visibility:visible ;
+    opacity: 1;
+
+
+
+}
+.layer-content .layer-info {
+    position: absolute ;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+      text-align: center;
+
+}
+.layer-content-categorie{
+margin-bottom: 3px;
+color :  #6195ff;
+text-transform: uppercase;
+display: block;
+top: 10px;
+transition: top 0.5s ,opacity .5s;
+position: relative;
+transition-delay: 0;
+
+}
+.layer-content-title {
+font-size: 20px;
+color: white;
+margin-bottom: 13px;
+top: 10px;
+transition: top 0.5s ,opacity .5s;
+position: relative;
+transition-delay: .2s;
+
+}
+.layer-content a {
+    /*miche n7ot les icon janb ba3dh*/
+display: inline-block;
+width: 40px;
+height: 40px;
+background-color: #6195ff;
+position: relative;
+top: 10px;
+transition: top 0.5s,opacity .5s;
+transition-delay: 0.3s;
+/*yestana nos taniya miche yetla3*/
+}
+.layer-content a i {
+    line-height: 40px;
+    color: white;
+}
+.profil-item:hover .layer-content-categorie, .profil-item:hover .layer-content-title, .profil-item:hover .layer-content a {
+    top: 0px;
+}
+/* offer  Section */
+.offer-container{
+    overflow: hidden;
+}
+.offer-item{
+    width: 30%;
+    float: left;
+    border: 2px solid #e8e8e8;
+  
+    margin-bottom: 50px;
+    padding: 20px 15px 30px  70px;
+    position: relative;
+}
+.offer-item.mg{
+    margin: 0 5%; 
+}
+.offer-item .icon {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: #6195ff
+}
+.offer-title-items {
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    transition: color 0.5s;
+}
+.offer-discription-items{
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    line-height:1.2 ;
+    color: #999;
+    font-size: 18px;
+}
+
+.offer-item:hover .offer-title-items {
+    color: white;
+}
+/* Team Section */
+.service-section{
+    background-color: rgb(243, 241, 241);}
+    .service{
+        overflow: hidden;
+    }
+    .service-item{
+        float: left;
+        width: 50%;
+    }
+    .service-item .section-header{
+        text-align: left;
+    }
+    .service-item  .section-header .line{
+        margin:0 0 70px 0;
+    }
+    .service-desc {
+        padding-right: 100px;
+                line-height: 1.6;
+        word-spacing: 2px;
+        font-size: 19px;
+    color: #999;
+    }
+    .service-list{
+        list-style-type: none;
+    }
+    .service-list li  i{
+        border: 1px solid #6195ff;
+        color: #6195ff;
+        padding: 7px 5px;
+        border-radius: 50%;
+    }
+    .service-list li {
+        margin-bottom: 10px;
+    }
+    .service-bollets {
+        text-align: center;
+    }
+    .service-bollets li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #e9e9e9;
+    }
+    .service-bollets li.active{
+
+background-color: #6195ff ;
+    }
+    .service-bollets li:hover {
+        background-color: #6195ff ;
+   
+    }
+/* numbers Section */
+.number-section {
+    position: relative;
+    height: 300px;
+    margin-bottom: 80px;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;/*micehtaswira */
+  
+    background-attachment: fixed;/*taswira fixed kii entiii tit7arekk*/
+}
+
+
+.numbers-tem{
+    overflow: hidden;
+    padding :   110px  0 ;}
+    .number-items{
+    float: left;
+    width: 25%;
+    text-align : center ;
+
+}
+.number-items  .icon {
+color:   #6195ff ;
+margin-bottom: 15px;
+
+
+}
+.number-items .number-item-num{
+font-weight: bold;
+font-size: 37px;
+color: white;
+margin-bottom: 15px;
+
+}
+.number-items .number-item-text{
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize
+    
+}
+/* pricing Section */
+ .pricing-items{
+     overflow: hidden;
+ }
+.pricing-item{
+    border: 1px solid #999;
+    width: 30%;
+    text-align: center;
+    padding: 40px 15px;
+    float: left;
+}
+.pricing-item.mg{
+margin :0 5%
+
+}
+.pricing-item-text{
+    text-transform: uppercase;
+    font-size: 17px;
+    color:#999 ;
+    transition: color 0.5s
+}
+.pricing-item-permonth{
+    width: 130px;
+    height: 130px;
+   border: 2px solid    #6195ff;
+    margin: 15px auto;
+    border-radius: 50%;
+   padding: 20px 0px;
+ 
+}
+.pricing-list{
+    list-style-type: none;
+    margin-bottom: 15px;
+    line-height: 25px;
+    ;
+}
+.pricing-list  li {
+    color: #999;
+    line-height: 2;
+    font-size: 18px;
+}
+.pricing-item-purchase{
+    width: 150px;
+    height: 50px;
+    border: 2px solid   #6195ff ;
+    background-color: transparent;
+    color:  #6195ff ;
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+.dolar{
+font-size: 50px;
+transition: color 0.5s;
+}
+.month{
+text-transform: capitalize;
+font-weight: bolder;
+transition: color 0.5s;
+}
+
+/* hounii nista3ml height miche effet yessir min louta lil fou9 donc nedem 3al heigt ykoun 0 w ba3d ki
+ na3ml haver iwalii 100 w na3ml transaction fil parent 3ala height*/
+.bt-effect ,.ltr-effect  {
+    position: relative; 
+  
+   
+}
+.bt-effect::after ,.ltr-effect::after{
+position: absolute;
+content: "";
+
+right: 0;
+top:0;
+left:0;
+bottom: 0;
+background-color: #333;
+
+z-index:  -1;;
+}
+
+.bt-effect::after {
+    
+    width: 100%;
+    height: 0;
+    transition: height 0.5s;
+   
+    }
+.bt-effect:hover:after{
+    height: 100%;   
+} 
+.pricing-item:hover .pricing-item-text{
+    color: #6195ff;
+
+}
+.pricing-item:hover .dolar , .pricing-item:hover .month {
+    color: white;
+}
+
+/*testiomnail-section*/
+.testiomnail-section{
+  position: relative;
+    background-image: url(../images/background/background3.webp);
+    background-attachment: fixed;
+    background-size: cover;
+  
+   height: 300px;
+}
+.testiomnail-items{
+    overflow: hidden;
+    padding: 70px 0;
+    margin: auto;
+    width: 80%;
+}
+.testiomnail-item {
+    float: left;
+    width: 50% ;
+    color: white;
+}
+ .testiomnail-topolary{
+    padding: 10px 2px 10px 100px;
+    position: relative;
+    margin-bottom: 20px;
+   
+    
+}
+
+.testiomnail-topolary .testiomnail-img{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border-radius: 50%;
+   
+
+}
+.testiomnail-item  .testiomnail-topolary span {
+    color : #6195ff ;
+    font-size: 15px;
+} 
+.testiomnail-item  .testiomnail-topolary h2 {
+   margin-bottom: 5px 0;
+} 
+.testiomnail-item   .testiomnail-descrition{
+    padding: 0px 100px 0px 0px ;
+    line-height: 1.4;
+    word-spacing: 1;
+    font-size: 18px;
+
+}
+
+.team-items{
+    overflow: hidden;
+}
+.team-items  .team-item {
+    float: left;
+    width: 30%;
+    background-color: #e8e8e8;
+  text-align: center;
+    padding: 40px 15px;
+}
+
+.team-info .team-info-title{
+    color: #222;
+    margin: 10px 0;
+    font-size: 20px;
+    transition: color 0.5s;
+}
+.team-info .team-info-desc{
+    color: #999;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: color 0.5s;
+}
+.team-item.mg{
+    margin: 0 5%;
+}
+
+ .team-item .team-image{
+   width:90% ;
+   margin: auto;
+position: relative;}
+.team-item .team-image img{
+    width:100% ;
+ }
+.team-overly{
+    position: absolute;
+    /* ya3nii yemlaa parent kolou*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /*
+    */
+    background-color:rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.team-overly a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color:  #6195ff ;
+    color: white;
+    margin-left: auto;
+   
+}
+.team-overly a i{
+    line-height: 40px;
+
+}
+.team-item:hover .team-overly  {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-item.bt-effect{
+    z-index: 1;
+}
+.team-item:hover .team-info-title {
+    color: white;
+}
+.team-item:hover .team-info-desc {
+    color:  #6195ff ;
+} 
+/* section blog*/
+.blog-section{
+    background-color: #f8f8f8;
+}
+.blog-items{
+overflow: hidden;
+
+}
+.blog-item{
+    width: 30%;
+    float: left;
+    background-color: #fff;
+   
+}
+
+.blog-img{
+    margin-bottom: 5px;
+}
+.blog-img img{
+   width: 100%;
+
+}
+.bolg-info{
+    padding: 20px;
+}
+
+.blog-list{
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+.blog-list li {
+
+    display:inline-block;
+    margin: 0  7px;
+}
+.blog-list li i {
+    margin-right: 2px;
+    color: #6195ff;
+
+}
+.blog-title{
+    margin:  15px 0px;
+    font-weight: bold;
+}
+.blog-text{
+    margin-bottom: 15px;
+    color: #999;
+    line-height: 1.5;
+    word-spacing: 1;
+    font-size: 18px;
+}
+.blog-link{
+    text-decoration: none;
+    color: #6195ff;
+    font-size: 19px;
+   
+}
+.blog-item.mg{
+margin: 0 5%;
+}
+/*user section*/
+.user-items{
+overflow: hidden;
+margin : 70px 0;
+
+}
+.user-item {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.user-item i{
+    color: #6195ff;
+    margin-bottom: 15px;
+}
+.user-item.mg{
+    margin: 0 5%;
+}
+.user-title{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.user-desc{
+  color: #999;  
+ font-size: 18px;
+}
+.user-input{
+    width: 65%;
+    text-align: center;
+    margin: auto;
+}
+.user-input >  input , .user-input  .input-massage   {
+    width: 100%;
+    margin: 10px 0;
+}
+.user-input div input {
+    width: 49%;
+}
+.input-name {
+    margin-right: 2%;
+}
+.user-input  input  {
+    height: 35px;
+    background-color: #f8f8f8;
+    color: #999;
+    border: none;
+    padding: 10px;
+font-size: 18px;
+
+}
+.input-massage{
+height: 60px;
+background-color: #f8f8f8;
+color: #999;
+border: none;
+padding: 10px;
+font-size: 18px;
+
+}
+.user-button{
+background-color: #6195ff;
+border: none;
+width: 180px;
+height: 50px; 
+color: white;
+border-radius: 2%;
+font-size: 15px;
+margin-top: 10px;
+}
+
+/*footer */
+.fotter-section{
+    background-color : #1c1d21;
+    height: 400px;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+.footer-links{
+    list-style: none;
+    margin: 30px 0 20px 0;
+} 
+.footer-links  li  {
+  display: inline-block;
+
+ 
+  
+ 
+}
+.footer-links  li a  {
+    display: block;
+    color: white;
+    background-color:#6195ff ;
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    border-radius: 50%;
+    
+    
+
+}
+.footer-links  li a i {
+line-height: 50px;
+}
+.footer-text{
+    color:#999;
+    font-size: 15px;
+    text-transform: uppercase;
+}
